@@ -13,5 +13,6 @@
     <string name="views_demo">Views- und Events-Demo Demo</string>
     <string name="views_title">3. Views und Events</string>
     <string name="show_me">Zeigs mir!</string>
+    <string name="viewdemo_fluenttext">Hier werden alle Änderungen angezeigt</string>
 
 </resources>
