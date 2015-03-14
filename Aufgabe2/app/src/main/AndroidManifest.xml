@@ -20,6 +20,10 @@
             android:name=".LayoutDemoActivity"
             android:label="@string/layout_demo" >
         </activity>
+        <activity
+            android:name=".ViewsDemoActivity"
+            android:label="@string/views_demo" >
+        </activity>
     </application>
 
 </manifest>

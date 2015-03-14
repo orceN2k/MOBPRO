@@ -36,6 +36,11 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    public void onClickViewsButton(final View btn){
+        Intent intent = new Intent(this, ViewsDemoActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
