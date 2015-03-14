@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UI-Demo</string>
+    <string name="app_title">HSLU - MOBPRO</string>
+    <string name="app_subtitle">Das isch die 2t Ufgab!</string>
+    <string name="action_settings">Istellige</string>
+    <string name="layout_demo">Layout Demo</string>
+    <string name="layout_title">1. Läyauts</string>
+    <string name="oriented_title">2. Skreen Orientierig und Sprooch</string>
+    <string name="oriented_text">Hallo Velo das done sett eigendlich es lorem ipsum sii aber da mer jo ez schwiizerdütsch igstellt hend chömmer jo schlecht latein uftische oder?</string>
+
+</resources>
