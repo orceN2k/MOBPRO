@@ -4,5 +4,7 @@
     <string name="app_name">Aufgabe2</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="layout_demo">Layout Demo</string>
+    <string name="layout_title">1. Layouts</string>
 
 </resources>

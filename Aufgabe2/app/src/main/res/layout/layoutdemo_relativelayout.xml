@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:width="80sp"
+        android:height="300sp"
+        android:id="@+id/yellow"
+        android:layout_above="@+id/green"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:width="300sp"
+        android:height="80sp"
+        android:id="@+id/green"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:width="80sp"
+        android:height="420sp"
+        android:id="@+id/blue"
+        android:layout_below="@+id/red"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/green"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:width="400sp"
+        android:height="80sp"
+        android:id="@+id/red"
+        android:layout_toEndOf="@+id/yellow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/cyan"
+        android:width="60sp"
+        android:height="60sp"
+        android:id="@+id/cyan"
+        android:layout_below="@+id/red"
+        android:layout_toEndOf="@+id/yellow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:width="40sp"
+        android:height="40sp"
+        android:id="@+id/pink"
+        android:layout_above="@+id/green"
+        android:layout_toStartOf="@+id/blue" />
+
+
+</RelativeLayout>
