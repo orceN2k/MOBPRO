@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UI-Demo</string>
+    <string name="app_title">HSLU - MOBPRO</string>
+    <string name="app_subtitle">Dies ist die 2te Aufgabe</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="layout_demo">Layout Demo</string>
+    <string name="layout_title">1. Layouts</string>
+    <string name="oriented_title">2. Screen-Orientation und Übersetzung</string>
+    <string name="oriented_text">Scusi Papedi Pupi, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</string>
+    <string name="views_demo">Views- und Events-Demo Demo</string>
+    <string name="views_title">3. Views und Events</string>
+    <string name="show_me">Zeigs mir!</string>
+    <string name="viewdemo_fluenttext">Hier werden alle Änderungen angezeigt</string>
+
+</resources>

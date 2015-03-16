@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Ich bin ein vertikales Linear Layout"
+        android:id="@+id/textView" />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="200sp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:background="@color/yellow"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:background="@color/red"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:background="@color/green"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:background="@color/blue"/>
+
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Ich bin ein horizontales Linear Layout"
+        android:id="@+id/textView2" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="250sp">
+
+        <Button
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/yellow"/>
+
+        <Button
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/red"/>
+
+        <Button
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/green"/>
+
+        <Button
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:background="@color/blue"/>
+
+        </LinearLayout>
+
+</LinearLayout>
