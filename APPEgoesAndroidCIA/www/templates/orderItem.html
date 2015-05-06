@@ -1,0 +1,24 @@
+<ion-view view-title="Order Detail">
+    <ion-content class="padding">
+
+        <ion-list show-delete="">
+            <ion-item>
+                <div>
+                    {{ order.deliveryDate | date:"dd.MM.yyyy"}}
+                </div>
+                <div>
+                    {{ order.customer.name}} CHF: {{order.totalAmount}}
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+    <div class="bar bar-footer bar-stable">
+        <div class="buttons">
+            <button class="button disabled" ng-click="createOrder()">New Order</button>
+        </div>
+        <div class="buttons pull-right">
+            <button class="button" ng-click="data.showDelete = !data.showDelete">Cancel Order</button>
+        </div>
+    </div>
+</ion-view>

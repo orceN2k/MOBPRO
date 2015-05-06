@@ -1,0 +1,19 @@
+<ion-view view-title="FBS - Login" ng-controller="LoginCtrl">
+    <ion-content class="padding">
+        <div class="list">
+            <label class="item item-input">
+                <i class="icon ion-person placeholder-icon"></i>
+                <input type="text" placeholder="Username" ng-model="userInfo.user">
+            </label>
+            <label class="item item-input">
+                <i class="icon ion-locked placeholder-icon"></i>
+                <input type="password" placeholder="Password" ng-model="userInfo.password">
+            </label>
+        </div>
+        <button class="button button-block button-positive icon-right ion-log-in" ng-click="login()">Login</button>
+        <label class="row">
+            <span class="input-label col">Server URL: </span>
+            <input class="col" type="text" ng-model="serverURL"/>
+        </label>
+    </ion-content>
+</ion-view>
