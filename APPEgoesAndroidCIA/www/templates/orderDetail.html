@@ -1,0 +1,29 @@
+<ion-view view-title="Order Detail">
+    <ion-content class="padding">
+
+        <ion-list>
+            <div class="row">
+                <div class="col col-25">Date: </div>
+                <div class="col col-75">{{ order.deliveryDate | date:"dd.MM.yyyy"}}</div>
+            </div>
+            <div class="row">
+                <div class="col col-25">Customer: </div>
+                <div class="col col-75">{{ order.customer.name }}</div>
+            </div>
+            <ion-list>
+                    <div class="row">
+                        <div class="col col-33">Product</div>
+                        <div class="col col-33">Quantity</div>
+                        <div class="col col-33">Price</div>
+                    </div>
+                    <ion-item ng-repeat="orderItem in order.orderItems" item="item" class="item-remove-animate">
+                        <div class="row">
+                            <div class="col col-33">{{ orderItem.article.name }}</div>
+                            <div class="col col-33">{{ orderItem.quantity }}</div>
+                            <div class="col col-33">{{ orderItem.price }}</div>
+                        </div>
+                    </ion-item>
+            </ion-list>
+        </ion-list>
+    </ion-content>
+</ion-view>
