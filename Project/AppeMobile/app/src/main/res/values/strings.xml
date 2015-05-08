@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">APPE goes Android</string>
+    <string name="username">User name</string>
+    <string name="settings">Settings</string>
+    <string name="Home">Home</string>
+    <string name="Articles">Articles</string>
+    <string name="Users">Users</string>
+    <string name="Replenishment">Replenishment</string>
+    <string name="Orders">Orders</string>
+    <string name="NewOrder">New Order</string>
+    <string name="ShowDetails">Show Details</string>
+    <string name="Cancelation">Cancelation</string>
+</resources>

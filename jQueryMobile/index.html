@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>hello from the mobpro's</title>
+    <meta name="viewport" content="width=device-width,
+initial-scale=1">
+    <!--<link rel="stylesheet" href="vendor/jquery.mobile-1.4.5.min.css" />-->
+    <link rel="stylesheet" href="vendor/jquery.mobile-1.4.5.css" />
+    <script src="vendor/jquery-2.1.3.js"></script>
+    <script src="vendor/jquery.mobile-1.4.5.js"></script>
+</head>
+<body>
+<div id="mainpage" data-role="page">
+    <div data-role="header">
+        <h2>note overview</h2>
+    </div>
+    <div data-role="content">
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#firstNote" data-transition="pop">first note :)</a></li>
+                <li><a href="#secondNote" data-transition="slidedown">some othe note </a></li>
+                <li><a href="#thirdNote" data-transition="fade">... last but not least ^^</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h4>MobPro</h4>
+    </div>
+</div>
+<div id="firstNote" data-role="page">
+    <div data-role="header">
+        <h2>note detail</h2>
+    </div>
+    <div data-role="content">
+        <p>first note ...</p>
+        <input type="text" name="name" id="noteInsertOne" value=""  />
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h4>MobPro</h4>
+    </div>
+</div>
+
+<div id="secondNote" data-role="page">
+    <div data-role="header">
+        <h2>note detail</h2>
+    </div>
+    <div data-role="content">
+        <p>second note ...</p>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h4>MobPro</h4>
+    </div>
+</div>
+
+<div id="thirdNote" data-role="page">
+    <div data-role="header">
+        <h2>note detail</h2>
+    </div>
+    <div data-role="content">
+        <p>third note ...</p>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h4>MobPro</h4>
+    </div>
+</div>
+</body>
+</html>

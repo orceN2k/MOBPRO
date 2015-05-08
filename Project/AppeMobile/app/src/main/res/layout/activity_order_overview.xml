@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="@string/Orders"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="#755daaff"
+        android:textSize="38sp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="344dp"
+        android:id="@+id/order_overview_listorders" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/NewOrder"
+        android:id="@+id/order_overview_new"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Cancelation"
+            android:id="@+id/order_overview_cancel"
+            android:layout_weight="0.50" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ShowDetails"
+            android:id="@+id/order_overview_details"
+            android:layout_weight="0.50" />
+    </LinearLayout>
+</LinearLayout>

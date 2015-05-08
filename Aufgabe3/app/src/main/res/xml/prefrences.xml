@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/TeePrefsTitle">
+        <CheckBoxPreference
+            android:title="@string/DoYouLikeSweetenedTea"
+            android:summary="@string/shouldYourTeeGetSweetened"
+            android:persistent="true"
+            android:key="teaSweetenerEnabled"
+            android:id="@+id/activity_teepref_checkSweetener"
+            />
+        <ListPreference
+            android:dependency="teaSweetenerEnabled"
+            android:key="teaSweetener"
+            android:title="select your sweetener"
+            android:summary="how would you like your tea sweetened ?"
+            android:shouldDisableView="true"
+            android:persistent="true"
+            android:entries="@array/teaSweetener"
+            android:entryValues="@array/teaSweetenerValues"
+            />
+        <EditTextPreference
+            android:title="Favourite tea ?"
+            android:persistent="true"
+            android:key="teaFavourite"
+            android:id="@+id/activity_teepref_textFavouritTee"
+            />
+
+    </PreferenceCategory>
+</PreferenceScreen>

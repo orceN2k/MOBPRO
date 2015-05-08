@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Aufgabe3 ... :)</string>
+
+    <string name="textCounter">Die OnResume() der App wurde seit der Installation %d gestartet...</string>
+    <string name="action_settings">Settings</string>
+    <string name="resetstring">reset counter</string>
+    <string name="editTeePrefs">edit tee prefs</string>
+    <string name="setDefaultTeePrefs">set default tee prefs</string>
+    <string name="TeePrefsTitle">Tee Prefs</string>
+    <string name="DoYouLikeSweetenedTea">Do you like sweetened tea ?</string>
+    <string name="shouldYourTeeGetSweetened">Should your tee get sweetened</string>
+    <string name="TeaPreferences">Tea Preferences</string>
+    <string name="SafeOnExternalStorage">Safe on external storage</string>
+    <string name="Save">Save</string>
+    <string name="Load">Load</string>
+    <string name="NoteEditing">Note editing</string>
+    <string name="EditNote">edit note</string>
+</resources>
