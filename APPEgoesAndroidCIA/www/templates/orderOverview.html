@@ -1,14 +1,15 @@
-<ion-view view-title="Order Detail">
+<ion-view view-title="Order Overview">
     <ion-content class="padding">
 
-        <ion-list show-delete="">
-            <ion-item>
+        <ion-list show-delete="data.showDelete">
+            <ion-item ng-repeat="order in orders" item="item" ui-sref="orderDetail({orderId: order.id})" class="item-remove-animate">
                 <div>
                     {{ order.deliveryDate | date:"dd.MM.yyyy"}}
                 </div>
                 <div>
                     {{ order.customer.name}} CHF: {{order.totalAmount}}
                 </div>
+                <ion-delete-button class="ion-minus-circled" ng-click="cancelOrder(order)"></ion-delete-button>
             </ion-item>
         </ion-list>
     </ion-content>

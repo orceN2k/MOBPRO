@@ -1,13 +1,13 @@
-<ion-view view-title="FBS - Login" ng-controller="LoginCtrl">
+<ion-view view-title="FBS - Login" name="login-view">
     <ion-content class="padding">
         <div class="list">
             <label class="item item-input">
                 <i class="icon ion-person placeholder-icon"></i>
-                <input type="text" placeholder="Username" ng-model="userInfo.user">
+                <input type="text" placeholder="Username" ng-model="data.username">
             </label>
             <label class="item item-input">
                 <i class="icon ion-locked placeholder-icon"></i>
-                <input type="password" placeholder="Password" ng-model="userInfo.password">
+                <input type="password" placeholder="Password" ng-model="data.password">
             </label>
         </div>
         <button class="button button-block button-positive icon-right ion-log-in" ng-click="login()">Login</button>
