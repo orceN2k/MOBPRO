@@ -56,7 +56,9 @@ fbs.config(['$stateProvider', '$urlRouterProvider',($stateProvider, $urlRouterPr
 fbs.config(['$httpProvider', ($httpProvider) => {
     $httpProvider.defaults.headers.patch = {
         'Content-Type': 'application/json;charset=utf-8'
-    }
+    };
+    $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
 }]);
 
 fbs.run(['$rootScope', 'LoginService', '$state', ($rootScope, LoginService, $state) => {

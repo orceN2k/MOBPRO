@@ -16,23 +16,24 @@ var login;
             this.Base64 = Base64;
             // define http headers
             $http.defaults.headers.common = { "Access-Control-Request-Headers": "accept, origin, authorization" };
-            $scope.serverURL = "http://localhost:8080";
-            LoginService.serverURL = this.$scope.serverURL;
+            LoginService.serverURL = $scope.serverURL;
             $scope.data = {};
+            $scope.data.serverURL = "http://localhost:8080";
             $scope.login = function () {
                 var userInfo = {
                     user: $scope.data.username,
                     password: $scope.data.password
                 };
-                _this.$http.post(_this.$scope.serverURL + '/login', userInfo).success(function (data, status, headers, config) {
+                _this.$http.post($scope.data.serverURL + '/login', userInfo).success(function (data, status, headers, config) {
                     console.log(data.userPrincipal);
                     $rootScope.userPrincipal = data.userPrincipal;
-                    var token = Base64.encode($scope.data.username + ':' + $scope.data.password);
+                    var token = Base64.encode(userInfo.user + ':' + userInfo.password);
                     $http.defaults.headers.common['Authorization'] = 'Basic ' + token;
                     LoginService.baseAuthToken = token;
                     $state.go("overview");
                 }).error(function (data, status, headers, config) {
-                    alert("Login Failed - Error Code: " + status);
+                    //alert("Login Failed with serverUrl: " + $scope.data.serverURL +"- Error Code: " + status);
+                    alert(status + " // " + data + "//" + config);
                 });
             };
         }

@@ -42,6 +42,8 @@ fbs.config(['$httpProvider', function ($httpProvider) {
     $httpProvider.defaults.headers.patch = {
         'Content-Type': 'application/json;charset=utf-8'
     };
+    $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
 }]);
 fbs.run(['$rootScope', 'LoginService', '$state', function ($rootScope, LoginService, $state) {
     $rootScope.$on('$stateChangeStart', function (e, toState, toParams, fromState, fromParams) {
