@@ -4,19 +4,23 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="@string/Orders"
+        android:id="@+id/oder_overview_header"
         android:layout_width="match_parent"
         android:layout_height="66dp"
         android:background="#755daaff"
         android:textSize="38sp"
         android:layout_marginBottom="5dp"
         android:gravity="center"
-        />
+        android:text="@string/Orders" />
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="344dp"
-        android:id="@+id/order_overview_listorders" />
+        android:choiceMode="singleChoice"
+        android:listSelector="#4d90fe"
+        android:id="@+id/order_overview_listorders"
+        style="@style/AppTheme"
+        android:clickable="false" />
 
     <Button
         android:layout_width="match_parent"

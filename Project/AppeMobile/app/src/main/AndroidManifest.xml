@@ -16,12 +16,13 @@
             </intent-filter>
             </activity>
         <activity
-            android:name=".activity.LoginActitviy"
+            android:name=".activity.LoginActivity"
             android:label="@string/app_name">
         </activity>
         <activity android:name=".activity.OrderOverviewActivity"/>
-        <service android:name=".service.LoginService" />
-        <service android:name=".service.OrderService" />
+        <activity android:name=".activity.OrderDetailActivity"/>
+        <service android:name=".service.AppeService"/>
+
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 

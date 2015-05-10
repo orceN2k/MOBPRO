@@ -1,5 +1,7 @@
 package ch.hslu.appe.fs15.g10.appemobile;
 
+import org.apache.http.entity.StringEntity;
+
 /**
  * Created by Simon on 04.05.2015.
  */
@@ -12,10 +14,19 @@ public class Constants {
     public static final String SecurityTokenPrefrencesName = "Token";
     public static final String UserInfoPreferencesName = "UserInfo";
 
+    public class IntentParamNames{
+        public static final String OrderIdParamName = "OrderId";
+    }
+
     public class Roles{
         public static final String Admin ="administrator";
         public static final String Sales ="sales";
         public static final String Datatypist ="datatypist";
         public static final String Manager ="manager";
+    }
+
+    public class Communication
+    {
+        public static final String ContentTypeJSON = "application/json";
     }
 }

@@ -1,6 +1,5 @@
 package ch.hslu.appe.fs15.g10.appemobile.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,13 +15,13 @@ import ch.hslu.appe.fs15.g10.appemobile.dto.UserInfo;
 /**
  * Created by Simon on 04.05.2015.
  */
-class BaseActivity extends Activity {
+class BaseActivity extends BindingActivity {
 
     @Override
     protected void onResume() {
         super.onResume();
         //every view has to check the credentials on startup!
-        if (!hasLoginCredentials() && !this.getClass().getSimpleName().equals("LoginActitviy")) {
+        if (!hasLoginCredentials() && !this.getClass().getSimpleName().equals("LoginActivity")) {
             showLoginActivity();
         }
     }
@@ -32,24 +31,29 @@ class BaseActivity extends Activity {
         if(requestSecurityContext == null){
             return  false;
         }
-        //call service for login
-//        else if()
-
         return true;
     }
 
-    protected void showLoginActivity() {
-        Intent showLogin = new Intent(this, LoginActitviy.class);
+    protected final void showLoginActivity() {
+        Intent showLogin = new Intent(this, LoginActivity.class);
         startActivity(showLogin);
     }
 
-    protected void showOrderOverview(){
+    protected final void showOrderOverview(){
         Intent showLogin = new Intent(this, OrderOverviewActivity.class);
         startActivity(showLogin);
     }
 
-    protected void showNotImplemented(){
+    protected final void showNotImplemented(){
         Toast.makeText(getApplicationContext(), "Not Implemented", Toast.LENGTH_LONG).show();
+    }
+
+    protected final void showExceptionToast(final int statusCode){
+        if (statusCode == 401) {
+            Toast.makeText(getApplicationContext(), "Login failed", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getApplicationContext(), "Unexpected Error occcured! [Most common Error: Device might not be connected to Internet or remote server is not up and running]", Toast.LENGTH_LONG).show();
+        }
     }
 
     public static void setUserTokenInformationPreferences(RequestSecurityContext securityContext,UserInfo userInfo, Context context){
@@ -62,8 +66,7 @@ class BaseActivity extends Activity {
         editor.commit();
     }
 
-
-    protected RequestSecurityContext getRequestSecurityContext() {
+    protected final RequestSecurityContext getRequestSecurityContext() {
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         final Gson gson = new Gson();
         return gson.fromJson(preferences.getString(Constants.SecurityTokenPrefrencesName, ""), RequestSecurityContext.class);

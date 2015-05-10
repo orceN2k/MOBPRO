@@ -1,5 +1,6 @@
 package ch.hslu.appe.fs15.g10.appemobile.dto;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -74,6 +75,7 @@ public final class OrderDto {
     public void setTotalAmount(final double totalAmount) {
         this.totalAmount = totalAmount;
     }
+
     public String getSalesPerson() {
         return salesPerson;
     }
@@ -81,12 +83,13 @@ public final class OrderDto {
     public void setSalesPerson(final String salesPerson) {
         this.salesPerson = salesPerson;
     }
+
     public Date getDeliveryDate() {
         return deliveryDate;
     }
 
-    public void setDeliveryDate(final Date deliveryDate){
-        this.deliveryDate=deliveryDate;
+    public void setDeliveryDate(final Date deliveryDate) {
+        this.deliveryDate = deliveryDate;
     }
 
     public List<OrderItemDto> getOrderItems() {
@@ -120,5 +123,11 @@ public final class OrderDto {
 
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+       SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+        return getId() + " " + formatter.format(getDeliveryDate()) + " " + getCustomer().getName() + " " + getTotalAmount();
     }
 }

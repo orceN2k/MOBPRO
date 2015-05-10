@@ -51,4 +51,8 @@ public class OrderItemDto {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return getArticle().getName() + " Quantity: " + getQuantity() + " Price: " + getPrice();
+    }
 }

@@ -1,8 +1,6 @@
 package ch.hslu.appe.fs15.g10.appemobile.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,10 +15,10 @@ import ch.hslu.appe.fs15.g10.appemobile.dto.RequestSecurityContext;
  */
 public class MainActivity extends BaseActivity {
 
-    Button orderButton;
-    Button articlesButton;
-    Button usersButton;
-    Button replenishmentButton;
+    private Button orderButton;
+    private Button articlesButton;
+    private Button usersButton;
+    private Button replenishmentButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +54,7 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-    private void setButtonsInvisible() {
+    private void disableButtons() {
         orderButton.setEnabled(false);
         articlesButton.setEnabled(false);
         usersButton.setEnabled(false);
@@ -67,7 +65,7 @@ public class MainActivity extends BaseActivity {
     protected void onResume() {
         super.onResume();
         RequestSecurityContext requestSecurityContext = getRequestSecurityContext();
-        setButtonsInvisible();
+        disableButtons();
         if (requestSecurityContext != null) {
 
             if (requestSecurityContext.isUserInRole(Constants.Roles.Admin)) {
